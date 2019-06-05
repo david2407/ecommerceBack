@@ -1,0 +1,7 @@
+const SALT_ROUNDS = 10;
+const MAX_UPLOAD_SIZE_BYTES = 30 * 1000 * 1000;
+const SURVEY_QUESTION_TYPES = ['faces'];
+const AUDITORY_QUESTION_TYPES = ['stars', 'dropdown'];
+const LOCALES = { EN: 'en', ES: 'es' };
+
+module.exports = { SALT_ROUNDS, MAX_UPLOAD_SIZE_BYTES, SURVEY_QUESTION_TYPES, AUDITORY_QUESTION_TYPES, LOCALES };

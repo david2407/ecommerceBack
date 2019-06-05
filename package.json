@@ -1,0 +1,72 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Pruzzi BackEnd",
+  "main": "server.js",
+  "scripts": {
+    "check-prettier": "prettier --list-different --single-quote --print-width 120 '*.js' 'src/**/*.js' 'test/**/*.js' 'scripts/**/*.js'",
+    "dev": "NODE_ENV=development nodemon --watch 'src/**/*' --exec 'node bin/www'",
+    "test": "NODE_ENV=test mocha",
+    "prettier": "prettier --write --single-quote --print-width 120 '*.js' 'src/**/*.js' 'test/**/*.js' 'scripts/**/*.js'",
+    "lint": "eslint '*.js' 'src/**/*.js' 'test/**/*.js' 'scripts/**/*.js'",
+    "migrate:dev": "NODE_ENV=development sequelize db:migrate",
+    "migrate:undo": "NODE_ENV=development sequelize db:migrate:undo:all",
+    "sequelize": "sequelize",
+    "seed:dev": "NODE_ENV=development sequelize db:seed:all",
+    "seed:undo": "NODE_ENV=development sequelize db:seed:undo:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/pruzzi/backend.git"
+  },
+  "author": "jvelezpo,duvanmonsa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/pruzzi/backend/issues"
+  },
+  "homepage": "https://gitlab.com/pruzzi/backend#README",
+  "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
+    "aws-sdk": "^2.409.0",
+    "balanced-match": "^1.0.0",
+    "bcrypt": "^3.0.5",
+    "body-parser": "~1.18.2",
+    "composable-middleware": "^0.3.0",
+    "core-util-is": "^1.0.2",
+    "cron": "^1.6.0",
+    "dotenv": "^6.2.0",
+    "eslint": "^5.14.1",
+    "express": "^4.16.4",
+    "express-jwt": "^5.3.1",
+    "googleapis": "^37.2.0",
+    "helmet": "^3.15.1",
+    "jsonwebtoken": "^8.5.0",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "multer-s3": "^2.9.0",
+    "multer-s3-transform": "^2.3.2",
+    "pg": "^7.8.1",
+    "pg-hstore": "^2.3.2",
+    "prettier": "^1.16.4",
+    "sequelize": "^4.42.0",
+    "sharp": "^0.22.0",
+    "stripe": "^6.25.1",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.18.10",
+    "sequelize-cli": "^5.4.0",
+    "supertest": "^3.4.2"
+  },
+  "resolutions": {
+    "extend": "^3.0.2"
+  }
+}
